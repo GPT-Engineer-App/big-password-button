@@ -10,7 +10,7 @@ const Index = () => {
   };
 
   return (
-    <InputGroup size="lg" justifyContent="center" alignItems="center" w="100%" mt="20vh">
+    <InputGroup size="lg" justifyContent="center" alignItems="center" w="50%" mt="20vh">
       <Input pr="4.5rem" type={showPassword ? "text" : "password"} placeholder="Enter password" />
       <InputRightElement width="4.5rem">
         <Button h="1.75rem" size="sm" onClick={handleToggleShowPassword} colorScheme="black">
