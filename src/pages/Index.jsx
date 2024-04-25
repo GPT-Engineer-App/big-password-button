@@ -1,4 +1,4 @@
-import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { Button, Input, InputGroup, InputRightElement, Flex } from "@chakra-ui/react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 
@@ -10,14 +10,16 @@ const Index = () => {
   };
 
   return (
-    <InputGroup size="lg" justifyContent="center" alignItems="center" w="50%" mt="20vh">
-      <Input pr="4.5rem" type={showPassword ? "text" : "password"} placeholder="Enter password" />
-      <InputRightElement width="4.5rem">
-        <Button h="1.75rem" size="sm" onClick={handleToggleShowPassword} colorScheme="black">
-          {showPassword ? <FaEyeSlash /> : <FaEye />}
-        </Button>
-      </InputRightElement>
-    </InputGroup>
+    <Flex height="100vh" alignItems="center" justifyContent="center">
+      <InputGroup size="lg" justifyContent="center" alignItems="center" w="50%">
+        <Input pr="4.5rem" type={showPassword ? "text" : "password"} placeholder="Enter password" />
+        <InputRightElement width="4.5rem">
+          <Button h="1.75rem" size="sm" onClick={handleToggleShowPassword} colorScheme="black">
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </Button>
+        </InputRightElement>
+      </InputGroup>
+    </Flex>
   );
 };
 
